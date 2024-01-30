@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    private CharacterController controller;
-    private Vector3 direction;
-    private int desiredLane = 1; //0:left, 1:middle, 2:right
+    protected CharacterController controller;
+    protected Vector3 direction;
+    protected int desiredLane = 1; //0:left, 1:middle, 2:right
 
     public float forwardSpeed;
     public float laneDistance = 4;
@@ -18,7 +18,7 @@ public class CarController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         direction.z = forwardSpeed;
 

@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b099d2b2d87d9fa46847e7977ee811b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
+  forwardSpeed: 10
   laneDistance: 2.5
   gravity: -20
 --- !u!143 &707904832
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f3f830ba8a4ef4bb7667f4e46a0292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
+  forwardSpeed: 10
   laneDistance: 2.5
   jumpForce: 12
   gravity: -20
