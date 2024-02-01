@@ -10,7 +10,7 @@ public class PlayerController : CarController
     {
         base.Update(); // Call the base class implementation first
         // Player-specific input handling goes here
-        if (controller.isGrounded && Input.GetKeyUp(KeyCode.UpArrow))
+        if (controller.isGrounded && SwipeManager.swipeUp)
         {
             Jump();
         }

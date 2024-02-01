@@ -11,15 +11,18 @@ public class CarController : MonoBehaviour
     public float forwardSpeed;
     public float laneDistance = 4;
     public float gravity = -20;
-    // Start is called before the first frame update
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
+    
     protected virtual void Update()
     {
+        if (!PlayerManager.isGameStarted)
+            return;
+
         direction.z = forwardSpeed;
 
         direction.y += gravity * Time.deltaTime;
@@ -28,14 +31,14 @@ public class CarController : MonoBehaviour
 
         //input decides wich lane we should be in
         //TODO switch to touch input
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (SwipeManager.swipeRight)
         {
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (SwipeManager.swipeLeft)
         {
             desiredLane--;
             if (desiredLane == -1)
@@ -72,6 +75,8 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!PlayerManager.isGameStarted)
+            return;
         controller.Move(direction * Time.fixedDeltaTime);
     }
 
