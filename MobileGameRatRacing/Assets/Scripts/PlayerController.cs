@@ -9,7 +9,7 @@ public class PlayerController : CarController
     protected override void Update()
     {
         base.Update(); // Call the base class implementation first
-        // Player-specific input handling goes here
+        
         if (controller.isGrounded && SwipeManager.swipeUp)
         {
             Jump();
