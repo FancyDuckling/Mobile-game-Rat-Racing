@@ -11,10 +11,13 @@ public class CarController : MonoBehaviour
     public float forwardSpeed;
     public float laneDistance = 4;
     public float gravity = -20;
+
+    private Animator ratAnimator;
     
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        ratAnimator = GetComponent<Animator>();
     }
 
     
@@ -36,6 +39,7 @@ public class CarController : MonoBehaviour
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
+
         }
 
         if (SwipeManager.swipeLeft)
