@@ -8,6 +8,8 @@ public class SwipeManager : MonoBehaviour
    private bool isDraging = false;
    private Vector3 startTouch, swipeDelta;
 
+    
+
     private void Update()
     {
         tap = swipeDown = swipeUp = swipeLeft = swipeRight = false;
@@ -73,6 +75,7 @@ public class SwipeManager : MonoBehaviour
                     swipeDown = true;
                 else
                     swipeUp = true;
+
             }
 
             Reset();

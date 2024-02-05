@@ -12,7 +12,7 @@ public class CarController : MonoBehaviour
     public float laneDistance = 4;
     public float gravity = -20;
 
-  
+    
     
     void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : CarController
 {
     public float jumpForce;
+    public Animator playerAnimator;
 
     protected override void Update()
     {
@@ -13,12 +14,18 @@ public class PlayerController : CarController
         if (controller.isGrounded && SwipeManager.swipeUp)
         {
             Jump();
+           
         }
     }
 
     private void Jump()
     {
         direction.y = jumpForce;
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetTrigger("jumpingTrigger"); // "JumpTrigger" is the name of the jump animation trigger parameter
+        }
+
     }
 
 }
