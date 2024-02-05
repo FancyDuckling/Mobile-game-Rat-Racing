@@ -12,12 +12,12 @@ public class CarController : MonoBehaviour
     public float laneDistance = 4;
     public float gravity = -20;
 
-    private Animator ratAnimator;
+    public Animator ratAnimator;
     
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        ratAnimator = GetComponent<Animator>();
+        
     }
 
     
@@ -36,10 +36,11 @@ public class CarController : MonoBehaviour
         //TODO switch to touch input
         if (SwipeManager.swipeRight)
         {
+            
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
-
+            ratAnimator.SetBool("TurnRight", true);
         }
 
         if (SwipeManager.swipeLeft)
@@ -47,6 +48,7 @@ public class CarController : MonoBehaviour
             desiredLane--;
             if (desiredLane == -1)
                 desiredLane = 0;
+            ratAnimator.SetBool("TurnLeft", true);
         }
 
         //calculate where we should be in the future
