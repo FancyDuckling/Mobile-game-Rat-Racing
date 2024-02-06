@@ -20,6 +20,7 @@ public class Cheese : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindAnyObjectByType<AudioManager>().PlaySound("PickUpCheese");
             PlayerManager.numberOfCheese += 1;
             Destroy(gameObject);
         }

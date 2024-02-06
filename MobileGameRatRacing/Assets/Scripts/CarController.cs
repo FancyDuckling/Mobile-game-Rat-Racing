@@ -96,6 +96,10 @@ public class CarController : MonoBehaviour
         if (hit.transform.tag == "Obstacle")
         {
             PlayerManager.gameOver = true;
+
+            FindAnyObjectByType<AudioManager>().StopSound("MainTheme");
+
+            FindAnyObjectByType<AudioManager>().PlaySound("GameOver");
         }
     }
 }

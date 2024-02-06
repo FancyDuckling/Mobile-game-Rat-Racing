@@ -21,10 +21,12 @@ public class PlayerController : CarController
     private void Jump()
     {
         direction.y = jumpForce;
-        if (playerAnimator != null)
+        FindAnyObjectByType<AudioManager>().PlaySound("Jump");
+
+        /*if (playerAnimator != null)
         {
             playerAnimator.SetTrigger("jumpingTrigger"); // "JumpTrigger" is the name of the jump animation trigger parameter
-        }
+        }*/
 
     }
 

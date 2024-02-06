@@ -10613,6 +10613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783629532}
+  - component: {fileID: 783629533}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -10635,6 +10636,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783629533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783629531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45cb4863d8390b0458397ce8b0e45647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: c45c4305bec2f2c44bc9c6e2ffa32ff8, type: 3}
+    source: {fileID: 0}
+    volume: 0.2
+    loop: 1
+  - name: PickUpCheese
+    clip: {fileID: 8300000, guid: 3394e2fd3a4d67444a0c9f3d84126723, type: 3}
+    source: {fileID: 0}
+    volume: 0.3
+    loop: 0
+  - name: Jump
+    clip: {fileID: 8300000, guid: 1b4e012dabf647d4e9ed029ec6302091, type: 3}
+    source: {fileID: 0}
+    volume: 0.3
+    loop: 0
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 7b17de2fb7d36bd4089dda454b8d4d4e, type: 3}
+    source: {fileID: 0}
+    volume: 2
+    loop: 0
 --- !u!1 &802960577
 GameObject:
   m_ObjectHideFlags: 0
@@ -12414,7 +12448,7 @@ SceneRoots:
   - {fileID: 665387083}
   - {fileID: 1053076513}
   - {fileID: 1081487590}
+  - {fileID: 783629532}
   - {fileID: 1860902855}
   - {fileID: 1948848603}
   - {fileID: 587256245}
-  - {fileID: 783629532}
