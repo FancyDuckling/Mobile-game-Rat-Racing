@@ -13,7 +13,7 @@ public class Cheese : MonoBehaviour
    
     void Update()
     {
-        transform.Rotate(0 , 0 , 20 * Time.deltaTime);
+        transform.Rotate(0 , 0 , 20 * 2 * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
