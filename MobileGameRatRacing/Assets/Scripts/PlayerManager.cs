@@ -8,11 +8,13 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject startingText;
     public static bool isGameStarted;
+    public static int numberOfCheese;
     void Start()
     {
         Time.timeScale = 1;
         gameOver = false;
         isGameStarted = false;
+        numberOfCheese = 0;
     }
 
 
