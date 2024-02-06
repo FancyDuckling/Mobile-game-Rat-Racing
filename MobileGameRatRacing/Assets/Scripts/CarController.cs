@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
     protected int desiredLane = 1; //0:left, 1:middle, 2:right
 
     public float forwardSpeed;
+    public float maxSpeed;
     public float laneDistance = 4;
     public float gravity = -20;
 
@@ -26,6 +27,10 @@ public class CarController : MonoBehaviour
         if (!PlayerManager.isGameStarted)
             return;
 
+        //increase speed 
+        if(forwardSpeed < maxSpeed) 
+            forwardSpeed += 0.1f * Time.deltaTime;
+        
         direction.z = forwardSpeed;
 
         direction.y += gravity * Time.deltaTime;

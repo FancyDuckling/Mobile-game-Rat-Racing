@@ -10479,6 +10479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 10
+  maxSpeed: 25
   laneDistance: 2.5
   gravity: 0
 --- !u!143 &707904832
@@ -10653,6 +10654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 10
+  maxSpeed: 25
   laneDistance: 2.5
   gravity: -20
   jumpForce: 12
@@ -11081,7 +11083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ced1732c8bfa0a48944b6891bbc7536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 802960585}
 --- !u!1001 &1422159498
 PrefabInstance:
   m_ObjectHideFlags: 0
