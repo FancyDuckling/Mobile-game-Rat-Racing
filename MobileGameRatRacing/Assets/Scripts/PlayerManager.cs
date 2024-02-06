@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject startingText;
     public static bool isGameStarted;
     public static int numberOfCheese;
+    public TextMeshProUGUI cheeseText;
+    
     void Start()
     {
         Time.timeScale = 1;
@@ -25,6 +29,8 @@ public class PlayerManager : MonoBehaviour
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
+
+        cheeseText.text = numberOfCheese.ToString();
 
         if (SwipeManager.tap)
         {
