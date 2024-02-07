@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "868324109541",
+    "firebase_url": "https://ratracing-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ratracing",
+    "storage_bucket": "ratracing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868324109541:android:1b694a074e8b833306380c",
+        "android_client_info": {
+          "package_name": "com.Ancoras.MobileGameRatRacing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPxU2Acb8Q02JbkH5sPdRd4-wpHQaevDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
