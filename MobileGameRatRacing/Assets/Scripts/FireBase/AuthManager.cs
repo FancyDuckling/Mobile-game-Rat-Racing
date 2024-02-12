@@ -59,7 +59,7 @@ public class AuthManager : MonoBehaviour
 
     public void RegisterButton()
     {
-        StartCoroutine(Register(emailLoginField.text, passwordLoginField.text, usernameRegisterField.text));
+        StartCoroutine(Register(emailRegisterField.text, passwordRegisterField.text, usernameRegisterField.text));
     }
 
     private IEnumerator Login(string _email, string _password)
