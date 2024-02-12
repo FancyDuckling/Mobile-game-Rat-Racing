@@ -4,6 +4,7 @@ using UnityEngine;
 using Firebase;
 using Firebase.Auth;
 using TMPro;
+using System.Threading.Tasks;
 
 public class AuthManager : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class AuthManager : MonoBehaviour
         auth = FirebaseAuth.DefaultInstance;
     }
 
-  /*  public void LoginButton()
+  public void LoginButton()
     {
         StartCoroutine(Login(emailLoginField.text, passwordLoginField.text));
     }
@@ -100,8 +101,8 @@ public class AuthManager : MonoBehaviour
         {
             //User is now logged in
             //Now get the result
-            User = LoginTask.Result.User;
-            Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
+            user = LoginTask.Result.User;
+            Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.Email);
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In";
         }
@@ -155,15 +156,15 @@ public class AuthManager : MonoBehaviour
             {
                 //User has now been created
                 //Now get the result
-                User = RegisterTask.Result.User;
+                user = RegisterTask.Result.User;
 
-                if (User != null)
+                if (user != null)
                 {
                     //Create a user profile and set the username
                     UserProfile profile = new UserProfile { DisplayName = _username };
 
                     //Call the Firebase auth update user profile function passing the profile with the username
-                    Task ProfileTask = User.UpdateUserProfileAsync(profile);
+                    Task ProfileTask = user.UpdateUserProfileAsync(profile);
                     //Wait until the task completes
                     yield return new WaitUntil(predicate: () => ProfileTask.IsCompleted);
 
@@ -185,5 +186,5 @@ public class AuthManager : MonoBehaviour
                 }
             }
         }
-    }*/
+    }
 }
