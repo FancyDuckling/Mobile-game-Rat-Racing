@@ -10766,7 +10766,7 @@ MonoBehaviour:
   laneDistance: 2.5
   gravity: -20
   jumpForce: 12
-  playerAnimator: {fileID: 1584085451}
+  animator: {fileID: 802960585}
 --- !u!143 &802960583
 CharacterController:
   m_ObjectHideFlags: 0
@@ -10822,7 +10822,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802960577}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 52992f65740d40a4282b289c3726f665, type: 2}
   m_CullingMode: 0
@@ -11469,6 +11469,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1584085451}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e1142aa173870542a8d8373031b01f8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1584085452}
     - targetCorrespondingSourceObject: {fileID: -1622681249416398640, guid: 7e1142aa173870542a8d8373031b01f8,
         type: 3}
       insertIndex: -1
@@ -11517,7 +11521,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584085449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 52992f65740d40a4282b289c3726f665, type: 2}
   m_CullingMode: 0
@@ -11530,6 +11534,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1584085452
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584085449}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1665791931
 GameObject:
   m_ObjectHideFlags: 0
