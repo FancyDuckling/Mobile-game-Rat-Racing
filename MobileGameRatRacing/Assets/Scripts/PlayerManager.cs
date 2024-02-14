@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Database;
 
 public class PlayerManager : MonoBehaviour
 {
