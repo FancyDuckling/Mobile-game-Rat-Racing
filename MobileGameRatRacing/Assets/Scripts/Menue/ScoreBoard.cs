@@ -61,6 +61,6 @@ public class ScoreBoard : MonoBehaviour
         Debug.Log("Scoreboard: " + scoreboard);
         // Update UI with sorted scoreboard
         scoreboardText.text = scoreboard;
-        scoreboardText.ForceMeshUpdate();
+        
     }
 }
