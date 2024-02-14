@@ -14,4 +14,9 @@ public class Events : MonoBehaviour
     { 
         Application.Quit();
     }
+
+    public void SeeScores()
+    {
+        SceneManager.LoadScene("ScoreBoard");
+    }
 }
