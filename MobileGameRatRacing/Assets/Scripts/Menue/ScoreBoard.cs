@@ -57,7 +57,10 @@ public class ScoreBoard : MonoBehaviour
             scoreboard += scoreEntry.Key + ": " + scoreEntry.Value + "\n";
         }
 
+        // Debug log the scoreboard before updating UI
+        Debug.Log("Scoreboard: " + scoreboard);
         // Update UI with sorted scoreboard
         scoreboardText.text = scoreboard;
+        scoreboardText.ForceMeshUpdate();
     }
 }

@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ScoreBoard.unity
-    guid: 00f114fc66bd7584e8c61baec79f578e
+    path: Assets/Scenes/LogIn.unity
+    guid: 99a719999147c4c44a785fb0e01b6366
   - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 1
+    path: Assets/Scenes/ScoreBoard.unity
+    guid: 00f114fc66bd7584e8c61baec79f578e
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: e3479e6226111da4bacb111c1066d322, type: 2}
