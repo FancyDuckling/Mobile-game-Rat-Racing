@@ -9,12 +9,16 @@ using Firebase.Database;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static bool gameOver;
+    
     public GameObject gameOverPanel;
     public GameObject startingText;
+    public GameObject swipeUPText;
+    public GameObject swipeText;
+    public static bool gameOver;
     public static bool isGameStarted;
     public static int numberOfCheese;
     public TextMeshProUGUI cheeseText;
+
     
     void Start()
     {
@@ -40,7 +44,18 @@ public class PlayerManager : MonoBehaviour
         {
             isGameStarted = true;
             Destroy(startingText);
-            
+            swipeText.SetActive(true);
+
+        }
+
+        if (SwipeManager.swipeLeft || SwipeManager.swipeRight)
+        {
+            Destroy(swipeText);
+        }
+
+        if (SwipeManager.swipeUp)
+        {
+
         }
 
         if (Events.isShowinScore == true)
