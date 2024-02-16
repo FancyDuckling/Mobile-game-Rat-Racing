@@ -19,6 +19,10 @@ public class ScoreBoard : MonoBehaviour
         LoadScoresFromDatabase();
     }
 
+    void Update() 
+    {
+        LoadScoresFromDatabase();
+    }
     void LoadScoresFromDatabase()
     {
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
