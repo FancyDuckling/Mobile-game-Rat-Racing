@@ -7,23 +7,32 @@ public class Events : MonoBehaviour
 {
     public GameObject scorePanel;
     public GameObject gameOverPanel;
-    public TestScoreBoard scoreBoard;
+    public static bool isShowinScore;
+
+
+    private IEnumerator DelayedReset(bool value, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isShowinScore = value;
+    }
 
     public void ReplayGame()
     {
         SceneManager.LoadScene("Level");
+        //StartCoroutine(DelayedReset(false, 0.05f));
     }
 
     public void QuitGame() 
     { 
         Application.Quit();
+        isShowinScore = false;
     }
 
     public void SeeScores()
     {
-        //scoreBoard.ReloadScore(); // Reload the score data
-        gameOverPanel.SetActive(false);
+        isShowinScore = true;
         scorePanel.SetActive(true);
+        
        
     }
 }

@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
         gameOver = false;
         isGameStarted = false;
         numberOfCheese = 0;
+
     }
 
 
@@ -39,6 +40,13 @@ public class PlayerManager : MonoBehaviour
         {
             isGameStarted = true;
             Destroy(startingText);
+            
         }
+
+        if (Events.isShowinScore == true)
+        {
+            gameOverPanel.SetActive(false);
+        }
+
     }
 }
