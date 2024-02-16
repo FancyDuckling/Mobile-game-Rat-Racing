@@ -10,16 +10,12 @@ public class Events : MonoBehaviour
     public static bool isShowinScore;
 
 
-    private IEnumerator DelayedReset(bool value, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        isShowinScore = value;
-    }
+    
 
     public void ReplayGame()
     {
         SceneManager.LoadScene("Level");
-        //StartCoroutine(DelayedReset(false, 0.05f));
+        isShowinScore = false;
     }
 
     public void QuitGame() 
