@@ -58,6 +58,7 @@ public class PlayerManager : MonoBehaviour
           
             if(swipeUpText != null)
                 swipeUpText.SetActive(true);
+                
            
         }
 
@@ -72,4 +73,6 @@ public class PlayerManager : MonoBehaviour
         }
 
     }
+
+ 
 }

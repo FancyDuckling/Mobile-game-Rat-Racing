@@ -29,7 +29,7 @@ public class CarController : MonoBehaviour
 
         //increase speed 
         if(forwardSpeed < maxSpeed) 
-            forwardSpeed += 0.8f * Time.deltaTime;
+            forwardSpeed += 0.6f * Time.deltaTime;
         
         direction.z = forwardSpeed;
 

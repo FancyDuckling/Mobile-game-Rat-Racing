@@ -9,6 +9,7 @@ public class TileManager : MonoBehaviour
     public float tileLenght = 30; //the lenght of 1 tile
     public int numberOfTiles = 5;
     public Transform playerTransform;
+    
 
     private List<GameObject> activeTiles = new List<GameObject>();
 
@@ -16,7 +17,7 @@ public class TileManager : MonoBehaviour
     {
         for (int i = 0; i < numberOfTiles; i++)
         {
-            if(i == 0)
+            if(i == 0) 
                 SpawnTile(0);
             else
                 SpawnTile(Random.Range(0, tilePrefabs.Length));
@@ -31,6 +32,8 @@ public class TileManager : MonoBehaviour
             SpawnTile(Random.Range(0, tilePrefabs.Length));
 
             DeleteTile();
+
+
         }
     }
 
