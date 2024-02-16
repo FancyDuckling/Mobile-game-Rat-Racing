@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Events : MonoBehaviour
 {
+    public GameObject scorePanel;
+    public GameObject gameOverPanel;
+    public TestScoreBoard scoreBoard;
+
     public void ReplayGame()
     {
         SceneManager.LoadScene("Level");
@@ -17,6 +21,9 @@ public class Events : MonoBehaviour
 
     public void SeeScores()
     {
-        SceneManager.LoadScene("ScoreBoard");
+        //scoreBoard.ReloadScore(); // Reload the score data
+        gameOverPanel.SetActive(false);
+        scorePanel.SetActive(true);
+       
     }
 }

@@ -11,6 +11,8 @@ using TMPro;
 public class ScoreBoard : MonoBehaviour
 {
     public TMP_Text scoreboardText; // Reference to the text field to display scores
+   
+    
 
     void Start()
     {
