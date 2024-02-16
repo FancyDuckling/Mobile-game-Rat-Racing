@@ -11739,7 +11739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &849787222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11800,9 +11800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '^
-
-    Swipe up '
+  m_text: "^\nSwipe up \nto jump"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a529220695a765f41bc6d2a465922014, type: 2}
   m_sharedMaterial: {fileID: -2598624921433760913, guid: a529220695a765f41bc6d2a465922014,
@@ -12044,7 +12042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 453552985}
   startingText: {fileID: 1795115908}
-  swipeUPText: {fileID: 0}
+  swipeUpText: {fileID: 849787221}
   swipeText: {fileID: 227250172}
   cheeseText: {fileID: 1826855569}
 --- !u!4 &1053076513
@@ -13122,7 +13120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1795115909
 RectTransform:
   m_ObjectHideFlags: 0

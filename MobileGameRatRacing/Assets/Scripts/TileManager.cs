@@ -23,7 +23,7 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (playerTransform.position.z - 35 > zSpawn - (numberOfTiles * tileLenght))

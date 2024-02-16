@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
     
     public GameObject gameOverPanel;
     public GameObject startingText;
-    public GameObject swipeUPText;
+    public GameObject swipeUpText;
     public GameObject swipeText;
     public static bool gameOver;
     public static bool isGameStarted;
@@ -44,18 +44,26 @@ public class PlayerManager : MonoBehaviour
         {
             isGameStarted = true;
             Destroy(startingText);
-            swipeText.SetActive(true);
+
+            if (swipeText != null)
+                swipeText.SetActive(true);
+
+
 
         }
 
         if (SwipeManager.swipeLeft || SwipeManager.swipeRight)
         {
             Destroy(swipeText);
+          
+            if(swipeUpText != null)
+                swipeUpText.SetActive(true);
+           
         }
 
         if (SwipeManager.swipeUp)
         {
-
+            Destroy(swipeUpText);
         }
 
         if (Events.isShowinScore == true)
