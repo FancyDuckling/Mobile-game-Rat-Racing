@@ -9,12 +9,10 @@ public class Events : MonoBehaviour
     public GameObject gameOverPanel;
     public static bool isShowinScore;
 
-
-    
-
     public void ReplayGame()
     {
         SceneManager.LoadScene("Level");
+        
         isShowinScore = false;
     }
 

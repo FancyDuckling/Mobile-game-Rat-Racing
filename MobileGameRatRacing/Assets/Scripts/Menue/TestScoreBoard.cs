@@ -51,15 +51,17 @@ public class TestScoreBoard : MonoBehaviour
 
             if (task.IsCompleted)
             {
-                DataSnapshot snapshot = task.Result;
-                if (snapshot.Exists)
-                {
-                    string username = snapshot.Child("username").Value.ToString();
-                    int score = int.Parse(snapshot.Child("score").Value.ToString());
-                    Debug.Log("snapshot of score and username");
-                    // Display the score in the UI
-                    DisplayScore(username, score);
-                }
+                 DataSnapshot snapshot = task.Result;
+                 if (snapshot.Exists)
+                 {
+                     string username = snapshot.Child("username").Value.ToString();
+                     int score = int.Parse(snapshot.Child("score").Value.ToString());
+                     Debug.Log("snapshot of score and username");
+                     // Display the score in the UI
+                     DisplayScore(username, score);
+                 }
+
+              
                 else
                 {
                     Debug.LogWarning("Score data does not exist.");
@@ -75,7 +77,7 @@ public class TestScoreBoard : MonoBehaviour
 
     private void DisplayScore(string username, int score)
     {
-        // Assuming you have a TextMeshProUGUI component attached to this GameObject
+        
         scoreText.text = "Username: " + username + "\nScore: " + score;
 
         Debug.Log("Scoreboard updated");
