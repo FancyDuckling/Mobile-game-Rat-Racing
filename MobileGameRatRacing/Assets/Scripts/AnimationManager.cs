@@ -41,5 +41,5 @@ public class AnimationManager : MonoBehaviour
 
 
 
-    //if swipe up ChangeAnimationState(JUMPANIM);
+   
 }
