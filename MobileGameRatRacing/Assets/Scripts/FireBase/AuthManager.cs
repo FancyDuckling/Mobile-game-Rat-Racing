@@ -6,6 +6,7 @@ using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AuthManager : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField passwordRegisterVerifyField;
     public TMP_Text warningRegisterText;
 
+    // Password toggle variable
+    public Toggle passwordToggle;
+
 
     private void Awake()
     {
@@ -51,9 +55,8 @@ public class AuthManager : MonoBehaviour
         // Set password field content type for login
         passwordLoginField.contentType = TMP_InputField.ContentType.Password;
 
-        // Set password field content type for registration
-        passwordRegisterField.contentType = TMP_InputField.ContentType.Password;
-        passwordRegisterVerifyField.contentType = TMP_InputField.ContentType.Password;
+        // Subscribe to the toggle value changed event
+        passwordToggle.onValueChanged.AddListener(OnToggleValueChanged);
     }
 
     private void InitializeFirebase()
@@ -199,5 +202,27 @@ public class AuthManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    // Method to handle toggle value changed event
+    public void OnToggleValueChanged(bool isToggled)
+    {
+        // Toggle password visibility based on the toggle state
+        if (isToggled)
+        {
+            // Set content type to default for text to show the password
+            passwordLoginField.contentType = TMP_InputField.ContentType.Standard;
+            
+        }
+        else
+        {
+            // Set content type to password to mask the password
+            passwordLoginField.contentType = TMP_InputField.ContentType.Password;
+           
+        }
+
+        // Refresh the input fields to update their display
+        passwordLoginField.ForceLabelUpdate();
+       
     }
 }
