@@ -46,6 +46,15 @@ public class AuthManager : MonoBehaviour
             }
         });
     }
+    private void Start()
+    {
+        // Set password field content type for login
+        passwordLoginField.contentType = TMP_InputField.ContentType.Password;
+
+        // Set password field content type for registration
+        passwordRegisterField.contentType = TMP_InputField.ContentType.Password;
+        passwordRegisterVerifyField.contentType = TMP_InputField.ContentType.Password;
+    }
 
     private void InitializeFirebase()
     {
