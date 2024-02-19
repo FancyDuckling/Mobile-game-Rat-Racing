@@ -65,10 +65,16 @@ public class ScoreBoard : MonoBehaviour
     void UpdateScoreboardUI(List<KeyValuePair<string, object>> scoreList)
     {
         string scoreboard = "";
+        int count = 0; // Counter to limit to top 8 scores
 
         foreach (var scoreEntry in scoreList)
         {
             scoreboard += scoreEntry.Key + ": " + scoreEntry.Value + "\n";
+
+            count++;
+
+            if (count >= 8) // Break the loop when 8 scores are displayed
+                break;
         }
 
         scoreboardText.text = scoreboard;
