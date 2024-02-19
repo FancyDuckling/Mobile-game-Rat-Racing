@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    //Screen object variables
+   
     public GameObject loginUI;
     public GameObject registerUI;
 
@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //Functions to change the login screen UI
+    
     public void LoginScreen() //Back button
     {
         loginUI.SetActive(true);

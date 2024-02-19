@@ -214,7 +214,6 @@ GameObject:
   m_Component:
   - component: {fileID: 81098372}
   - component: {fileID: 81098371}
-  - component: {fileID: 81098373}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -251,19 +250,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &81098373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81098370}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727cc2b91b00a534a8d58eb087137727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 588715991}
 --- !u!1 &138056376
 GameObject:
   m_ObjectHideFlags: 0
@@ -14408,7 +14394,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreBoard
       value: 
-      objectReference: {fileID: 81098373}
+      objectReference: {fileID: 0}
     - target: {fileID: 5116908360250895245, guid: 29529d374ece31a4186a08106ea30571,
         type: 3}
       propertyPath: scorePanel
