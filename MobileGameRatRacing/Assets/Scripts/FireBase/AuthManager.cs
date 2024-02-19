@@ -129,6 +129,10 @@ public class AuthManager : MonoBehaviour
             
             warningRegisterText.text = "Missing Username";
         }
+        else if (_username.Length > 10) // Check if username exceeds 10 characters
+        {
+            warningRegisterText.text = "Username must be 10 characters or less";
+        }
         else if (passwordRegisterField.text != passwordRegisterVerifyField.text)
         {
            
