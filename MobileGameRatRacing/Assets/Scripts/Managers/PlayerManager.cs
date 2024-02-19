@@ -19,60 +19,73 @@ public class PlayerManager : MonoBehaviour
     public static int numberOfCheese;
     public TextMeshProUGUI cheeseText;
 
-    
-    void Start()
+
+    private void Start()
+    {
+        InitializeGame();
+    }
+
+    private void Update()
+    {
+        HandleGameOver();
+        UpdateCheeseText();
+        HandleGameStart();
+        HandleSwipeActions();
+        HideGameOverPanel();
+    }
+
+    private void InitializeGame()
     {
         Time.timeScale = 1;
         gameOver = false;
         isGameStarted = false;
         numberOfCheese = 0;
-
     }
 
-
-    void Update()
+    private void HandleGameOver()
     {
         if (gameOver)
         {
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
+    }
 
+    private void UpdateCheeseText()
+    {
         cheeseText.text = numberOfCheese.ToString();
+    }
 
-        if (SwipeManager.tap)
+    private void HandleGameStart()
+    {
+        if (SwipeManager.tap && !isGameStarted)
         {
             isGameStarted = true;
             Destroy(startingText);
-
             if (swipeText != null)
                 swipeText.SetActive(true);
-
-
-
         }
+    }
 
+    private void HandleSwipeActions()
+    {
         if (SwipeManager.swipeLeft || SwipeManager.swipeRight)
         {
             Destroy(swipeText);
-          
-            if(swipeUpText != null)
+            if (swipeUpText != null)
                 swipeUpText.SetActive(true);
-                
-           
         }
 
-        if (SwipeManager.swipeUp)
-        {
+        if (SwipeManager.swipeUp)     
             Destroy(swipeUpText);
-        }
-
-        if (Events.isShowinScore == true)
-        {
-            gameOverPanel.SetActive(false);
-        }
-
+        
     }
 
- 
+    private void HideGameOverPanel()
+    {
+        if (Events.isShowinScore)
+            gameOverPanel.SetActive(false);
+        
+    }
+
 }
