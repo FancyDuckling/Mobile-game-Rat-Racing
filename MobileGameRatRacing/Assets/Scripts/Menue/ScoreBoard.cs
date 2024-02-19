@@ -22,11 +22,6 @@ public class ScoreBoard : MonoBehaviour
         LoadScoresFromDatabase();
     }
 
-    void Update()
-    {
-        
-        //LoadScoresFromDatabase();
-    }
 
     void LoadScoresFromDatabase()
     {
@@ -59,10 +54,10 @@ public class ScoreBoard : MonoBehaviour
                 scoreList.Add(new KeyValuePair<string, object>(username, score));
             }
 
-            // Sort the score list by score in descending order
+            // score in descending order
             scoreList.Sort((x, y) => ((int)y.Value).CompareTo((int)x.Value));
 
-            // Update UI with scoreboard
+            
             UpdateScoreboardUI(scoreList);
         }
     }
@@ -76,9 +71,6 @@ public class ScoreBoard : MonoBehaviour
             scoreboard += scoreEntry.Key + ": " + scoreEntry.Value + "\n";
         }
 
-        // Debug log the scoreboard before updating UI
-        //Debug.Log("Scoreboard: " + scoreboard);
-        // Update UI with sorted scoreboard
         scoreboardText.text = scoreboard;
 
         // Check if the logged-in player has beaten other players' scores
@@ -87,7 +79,7 @@ public class ScoreBoard : MonoBehaviour
             if (scoreEntry.Key != AuthManager.auth.CurrentUser.DisplayName && (int)scoreEntry.Value < loggedInPlayerScore)
             {
                 beatenPlayer.text = AuthManager.auth.CurrentUser.DisplayName + " beat " + scoreEntry.Key + "'s score!";
-                Debug.Log(AuthManager.auth.CurrentUser.DisplayName + " beat " + scoreEntry.Key + "'s score!");
+                
                
                 break; 
             }

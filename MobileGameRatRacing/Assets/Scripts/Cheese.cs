@@ -44,7 +44,7 @@ public class Cheese : MonoBehaviour
             scoreData["score"] = score;
             databaseRef.Child("scores").Child(userId).SetValueAsync(scoreData);
 
-            //Debug.Log("Score is saved to database " + username + score);
+           
         }
     }
 }

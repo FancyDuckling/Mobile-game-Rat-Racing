@@ -38,7 +38,7 @@ public class CarController : MonoBehaviour
        
 
         //input decides wich lane we should be in
-        //TODO switch to touch input
+        
         if (SwipeManager.swipeRight)
         {
             
@@ -69,11 +69,7 @@ public class CarController : MonoBehaviour
             targetPosition += Vector3.right * laneDistance;
         }
 
-       // transform.position = targetPosition; //Vector3.Lerp(transform.position, targetPosition, 80 * Time.deltaTime);
-       // controller.center = controller.center; //fixes bug of not colliding with cones
-
-
-        //this can also fix the bug
+        //fixes bug of not colliding with cones
         if (transform.position == targetPosition)
             return;
         Vector3 diff = targetPosition - transform.position;
