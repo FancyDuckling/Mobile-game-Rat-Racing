@@ -25,7 +25,7 @@ public class ScoreBoard : MonoBehaviour
     void Update()
     {
         
-        LoadScoresFromDatabase();
+        //LoadScoresFromDatabase();
     }
 
     void LoadScoresFromDatabase()
