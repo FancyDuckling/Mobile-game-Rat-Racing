@@ -13,7 +13,7 @@ public class AuthManager : MonoBehaviour
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;
+    public static FirebaseAuth auth;
     public FirebaseUser user;
 
     //Log in variables
@@ -37,6 +37,8 @@ public class AuthManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             dependencyStatus = task.Result;
